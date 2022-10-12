@@ -1,0 +1,106 @@
+/* Adding style to the body of the website */
+
+/* Doing a global reset for all elements of the website */
+
+* { 
+	margin: 0; 
+	padding: 0; 
+} 
+
+/* Hiding the overflow to have a better display during animations */
+
+body { 
+	overflow-y: hidden; 
+} 
+
+
+/* Adding style to the comic section */
+
+/* Using the flexbox layout to be able to design the comic */
+
+.comic { 
+	display: flex; 
+	flex-direction: column; 
+} 
+
+/* Setting the height and width of the svgs to the height and width of the viewport (the viewable screen) */
+
+svg { 
+	height: 100vh; 
+	width: 100vw; 
+} 
+
+/* Setting the background colors of the "frame" divs to the same colors as the background colors of the svgs */
+
+.first-frame { 
+	background-color: #AFDCEB; 
+	display: flex; 
+}
+
+.second-frame { 
+	background-color: #9FE0FF; 
+	display: flex; 
+}
+
+.third-frame { 
+	background-color: #0062A6; 
+	display: flex; 
+}
+
+.fourth-frame { 
+	background-color: #012A86; 
+	display: flex; 
+}
+
+.fifth-frame { 
+	background-color: #03143F; 
+	display: flex; 
+}
+
+.sixth-frame { 
+	background-color: #0B0C0F; 
+	display: flex; 
+}
+
+
+/* Animations for the comic section */
+
+.slide-in { 
+	animation-name: slide-in; 
+	animation-duration: 2.8s; 
+	animation-fill-mode: forwards; 
+}
+
+@keyframes slide-in { 
+	from { transform: translateY(100%) } to {  } 
+}
+
+.slide-out { 
+	animation-name: slide-out; 
+	animation-duration: 2.8s; 
+	animation-fill-mode: forwards; 
+}
+
+@keyframes slide-out { 
+	from {  } to { transform: translateY(-100%) } 
+}
+
+.fade-in { 
+	animation-name: fade-in; 
+	animation-duration: 2.8s; 
+	animation-fill-mode: forwards; 
+}
+
+@keyframes fade-in { 
+	from { opacity: 0 } to { opacity: 1 } 
+}
+
+.fade-out { 
+	animation-name: fade-out; 
+	animation-duration: 2.8s; 
+	animation-fill-mode: forwards; 
+}
+
+@keyframes fade-out { 
+	from { opacity: 1 } to { opacity: 0 } 
+}
